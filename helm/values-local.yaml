@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: sample-app
+  tag: "local"
+  pullPolicy: Never
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
