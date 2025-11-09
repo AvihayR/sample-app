@@ -1,7 +1,7 @@
 replicaCount: 3
 
 image:
-  repository: your-docker-registry/nodejs-app
+  repository: arrizze/sample:v1
   tag: "latest"
   pullPolicy: IfNotPresent
 
