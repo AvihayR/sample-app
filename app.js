@@ -13,11 +13,14 @@ let users = [
   { id: 3, name: 'Charlie Davis', email: 'charlie@example.com' }
 ];
 
+//Get name to greet
+const name = process.env.NAME
+
 // Routes
 // Home route
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to the Sample Node.js Application!',
+    message: `Welcome to the Sample Node.js Application, ${name}.`,
     endpoints: {
       users: '/api/users',
       userById: '/api/users/:id',

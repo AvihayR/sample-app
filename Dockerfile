@@ -13,6 +13,9 @@ COPY . .
 # Stage 2
 FROM node:24-alpine AS production
 
+ARG NAME=""
+ENV NAME=${NAME}
+
 RUN apk add --no-cache dumb-init
 
 RUN addgroup -S nodejs && \
