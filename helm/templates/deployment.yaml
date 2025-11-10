@@ -20,7 +20,7 @@ spec:
         - containerPort: {{ .Values.service.targetPort }}
         envFrom:
           - configMapRef:
-            name: {{ .Release.Name }}-config
+              name: {{ .Release.Name }}-config
         resources:
           limits:
             cpu: {{ .Values.resources.limits.cpu }}
